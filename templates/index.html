@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Weather Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-futbol"></i> Football Weather Prediction</h1>
+        <form id="prediction-form">
+            <div class="form-group">
+                <label for="weather">
+                    <i class="fas fa-cloud-sun"></i> Weather Condition:
+                </label>
+                <select id="weather" name="weather">
+                    <option value="Sunny">☀️ Sunny (Clear sky)</option>
+                    <option value="Cloudy">☁️ Cloudy (Overcast)</option>
+                    <option value="Rainy">🌧️ Rainy (Light to moderate rain)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="temperature">
+                    <i class="fas fa-thermometer-half"></i> Temperature:
+                </label>
+                <select id="temperature" name="temperature">
+                    <option value="Hot">🌡️ Hot (Above 30°C / 86°F)</option>
+                    <option value="Warm">🌡️ Warm (25-30°C / 77-86°F)</option>
+                    <option value="Mild">🌡️ Mild (18-24°C / 64-75°F)</option>
+                    <option value="Cool">🌡️ Cool (10-17°C / 50-63°F)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="humidity">
+                    <i class="fas fa-tint"></i> Humidity Level:
+                </label>
+                <select id="humidity" name="humidity">
+                    <option value="High">💧 High (Above 60% RH)</option>
+                    <option value="Normal">💧 Normal (40-60% RH)</option>
+                </select>
+            </div>
+
+            <button type="submit">
+                <i class="fas fa-check-circle"></i> Get Prediction
+            </button>
+        </form>
+        <div id="result"></div>
+        
+        <div class="info-panel">
+            <h3><i class="fas fa-info-circle"></i> Temperature Guide</h3>
+            <ul>
+                <li><strong>Hot:</strong> Above 30°C (86°F) - Very warm, hydration important</li>
+                <li><strong>Warm:</strong> 25-30°C (77-86°F) - Comfortable with proper hydration</li>
+                <li><strong>Mild:</strong> 18-24°C (64-75°F) - Ideal playing conditions</li>
+                <li><strong>Cool:</strong> 10-17°C (50-63°F) - Good with proper warm-up</li>
+            </ul>
+            
+            <h3><i class="fas fa-tint"></i> Humidity Guide</h3>
+            <ul>
+                <li><strong>High:</strong> Above 60% - Can affect stamina</li>
+                <li><strong>Normal:</strong> 40-60% - Comfortable range</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
