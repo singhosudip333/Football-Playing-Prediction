@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Prediction</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/scripts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Will We Play Football?</h1>
+        <form id="prediction-form">
+            <label for="weather">Weather:</label>
+            <select id="weather" name="weather">
+                <option value="Sunny">Sunny</option>
+                <option value="Cloudy">Cloudy</option>
+                <option value="Rain">Rain</option>
+            </select><br><br>
+            <label for="temperature">Temperature:</label>
+            <select id="temperature" name="temperature">
+                <option value="Hot">Hot (Above 30°C)</option>
+                <option value="Mild">Mild (18°C - 25°C)</option>
+                <option value="Cool">Cool (10°C - 18°C)</option>
+              </select>
+              <br><br>
+            <label for="humidity">Humidity:</label>
+            <select id="humidity" name="humidity">
+                <option value="High">High (Above 60%)</option>
+                <option value="Normal">Normal (40% - 60%)</option>
+              </select>
+              <br><br>
+            <button type="submit">Predict</button>
+        </form>
+        <h2 id="result"></h2>
+    </div>
+</body>
+</html>
